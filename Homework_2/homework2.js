@@ -1,2 +1,8 @@
 const os = require('os')
-console.log(os.networkInterfaces())
+const networks = os.networkInterfaces();
+
+networks['Wi-Fi']?.forEach(item => {
+    if(item.family === 'IPv4'){
+        console.log(item.address)
+    }
+});
