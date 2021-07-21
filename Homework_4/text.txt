@@ -1,0 +1,3 @@
+Parameters: This method accept two parameters as mentioned above and described below:
+path: This parameter holds the path of thefilewhere to readthefile. It can be string, bufferorURL.
+optionsItisanoptionalparameterhatholdsstringorobject.ReturnValueThimethodreturnsthefs.ReadStream object.BelowexamplesillustratethecreateReadStream() methodinNode.js:
