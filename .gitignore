@@ -1,8 +1,12 @@
 /node_modules
 /.idea
 package-lock.json
-package.json
-index.css
+package.jsonindex.css
 index.html
 script.js
 /images
+/Epam_homeworks
+addresses.csv
+example.js
+/Finally
+node_modules.zip
