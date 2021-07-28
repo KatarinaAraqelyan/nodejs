@@ -1,0 +1,1 @@
+{"uid":-1,"gid":-1,"username":"Interma Mobile","homedir":"C:\\Users\\Interma Mobile","shell":null}
