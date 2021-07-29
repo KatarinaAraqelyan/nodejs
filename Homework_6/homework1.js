@@ -1,7 +1,15 @@
-const http = require('http')
-const server = http.createServer((req,res)=>{
-    if (req.url === '/sunny'){
-        console.log("Yes.")
-    }
-});
-server.listen(3000)
+const events = require('events');
+const fs= require('fs');
+const EventEmitter = events.EventEmitter;
+
+const  Event = new EventEmitter();
+
+Event.on('homework',(file) =>{
+    fs.readFile(file,(err,data) =>{
+        if(err){
+            console.log(err);
+        }
+        else console.log(data.toString())
+    })
+})
+Event.emit('homework','homework.txt')

@@ -1,16 +1,17 @@
+const express = require('express');
+const router = express.Router();
+const app = express()
 const http = require('http')
-const url = require('url')
-const fs = require('fs')
-const server = http.createServer((req,res)=>{
-    const url1 = url.parse(req.url, true)
-    if(url1.query.file === "sunny"){
-      fs.createReadStream('./sunny.txt').pipe(res)
+const hour = new Date().getHours()
+router.route('/users').get((req,res) =>{
+    res.end('GET' + "   " + hour)
+}).post((req,res) => {
+    res.end('POST' + "   " + hour)
+}).put((req,res) => {
+    res.end('PUT' + "   " + hour)
+}).delete((req,res) => {
+    res.end('DELETE' + "   " + hour)
+})
 
-    }
-    else{
-        res.writeHead(404)
-        res.end("File not found")
-    }
-
-});
-server.listen(3000)
+app.use(router)
+http.createServer(app).listen(2020)
